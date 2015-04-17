@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backy" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/health_servel_ogo" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <EditText
+                        android:id="@+id/editText_username"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/textview_top"
+                        android:drawableLeft="@drawable/ic_user_name"
+                        android:drawableStart="@drawable/ic_user_name"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/username_hint"
+                        android:inputType="text"
+                        android:padding="3dp"
+                        android:textColor="@android:color/black" >
+                    </EditText>
+
+                    <EditText
+                        android:id="@+id/editText_password"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/textview_bottom"
+                        android:drawableLeft="@drawable/ic_password"
+                        android:drawableStart="@drawable/ic_password"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="@string/password_hint"
+                        android:inputType="textPassword"
+                        android:padding="3dp"
+                        android:textColor="@android:color/black" />
+
+                    <Button
+                        android:id="@+id/button_login"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/light_green_background_full"
+                        android:text="@string/login_button"
+                        android:textColor="@android:color/white" />
+
+                    <Button
+                        android:id="@+id/button_sign_up"
+                        android:layout_width="240dp"
+                        android:layout_height="42dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/light_green_background_full"
+                        android:text="@string/signup_button"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.2"
+                        android:background="@drawable/transparent_background" >
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/button_google_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/transparent_background_button"
+                        android:drawableEnd="@drawable/ic_go_next"
+                        android:drawableLeft="@drawable/ic_google"
+                        android:drawableRight="@drawable/ic_go_next"
+                        android:drawableStart="@drawable/ic_google"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/sign_google"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.2"
+                        android:background="@drawable/transparent_background" >
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/button_facebook_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/transparent_background_button"
+                        android:drawableEnd="@drawable/ic_go_next"
+                        android:drawableLeft="@drawable/ic_facebook"
+                        android:drawableRight="@drawable/ic_go_next"
+                        android:drawableStart="@drawable/ic_facebook"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/sign_fb"
+                        android:textColor="@android:color/white" />
+                </RelativeLayout>
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+
+                <com.facebook.widget.LoginButton
+                    android:id="@+id/authButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_margin="10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/health_servel_ogo" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/editText_sign_up_name"
+                    android:layout_width="240dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/textview_top"
+                    android:drawableLeft="@drawable/ic_user_name"
+                    android:drawableStart="@drawable/ic_user_name"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/username_hint"
+                    android:inputType="text"
+                    android:padding="3dp"
+                    android:textColor="@android:color/black" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/editText_sign_up_email"
+                    android:layout_width="240dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/textview_middle"
+                    android:drawableLeft="@drawable/ic_user_name"
+                    android:drawableStart="@drawable/ic_user_name"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/email_hint"
+                    android:inputType="textEmailAddress"
+                    android:padding="3dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/editText_sign_up_mobile"
+                    android:layout_width="240dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/textview_middle"
+                    android:drawableLeft="@drawable/ic_mobile"
+                    android:drawableStart="@drawable/ic_mobile"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/mobile_hint"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:padding="3dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/editText_sign_up_gender"
+                    android:layout_width="240dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/textview_middle"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawableLeft="@drawable/ic_user_name"
+                    android:drawableStart="@drawable/ic_user_name"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/editText_sign_up_password"
+                    android:layout_width="240dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/textview_middle"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:drawableStart="@drawable/ic_password"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/pass_hint"
+                    android:inputType="textPassword"
+                    android:padding="3dp"
+                    android:textColor="@android:color/black" />
+
+                <EditText
+                    android:id="@+id/editText_sign_up_password_re_enter"
+                    android:layout_width="240dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/textview_bottom"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:drawableStart="@drawable/ic_password"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/re_enter_pass_hint"
+                    android:inputType="textPassword"
+                    android:padding="3dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_sign_up_sign_up"
+                android:layout_width="240dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:background="@drawable/light_green_background_full"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/button_login_back"
+                android:layout_width="240dp"
+                android:layout_height="42dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/light_green_background_full"
+                android:text="@string/already_have_login"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/waveAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.95"
+        android:background="@drawable/healthserve_logo"
+        android:clickable="true"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <include layout="@layout/activity_hangout_dot_anim" />
+    </RelativeLayout>
+
+</RelativeLayout>

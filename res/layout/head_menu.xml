@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_forehead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="forehead" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_brain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="brain" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_left_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="left eye" />
+
+            <Button
+                android:id="@+id/button_right_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="right eye" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_left_ear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="left ear" />
+
+            <Button
+                android:id="@+id/button_right_ear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="right ear" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_nose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nose" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_cheek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cheek" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_lips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lips" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_teeth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="teeth" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_chin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="chin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button_neck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="neck" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/button_shoulder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="shoulder" />
+
+        <Button
+            android:id="@+id/button_armpit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="armpit" />
+
+        <Button
+            android:id="@+id/button_upper_arm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="upper arm" />
+
+        <Button
+            android:id="@+id/button_elbow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="elbow" />
+
+        <Button
+            android:id="@+id/button_forearm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="forearm" />
+
+        <Button
+            android:id="@+id/button_wrist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wrist" />
+
+        <Button
+            android:id="@+id/button_palm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="palm" />
+
+        <Button
+            android:id="@+id/button_fingers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fingers" />
+    </LinearLayout>
+
+</RelativeLayout>

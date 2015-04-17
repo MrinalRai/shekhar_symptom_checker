@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hsd.symptom.checker"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomTheme" >
+        <activity
+            android:name="hsd.symptom.checker.Splash_Screen_Activity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="hsd.symptom.checker.Login_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.Main_Screen_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.BodyMappingMenuActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.AbdomenActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.Find_Symptoms_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.SpecialityActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.HeadMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.HandActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ChestActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.PelvicActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.Symptom_Checker_Menu_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.Add_Sugar_Entry_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.View_Sugar_Entry_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.BMI_Calculator_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.Login_With_Google_Next_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.FrontBodyMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.BackBodyMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.BackHandMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.BackHeadMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.BackLegMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ChestMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.HandMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.LegMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.PelvisMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.AbdomenMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.UpperBackMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.LowerBackMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ButtockMappingActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.Add_BP_Entry_Activity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.DoctorListActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.DoctorDetailsActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ConfirmationActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.CalendarView" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ConfirmAppointmentActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.CheckSMSAutoActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.CheckSMSManualActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ProfileViewActivity" >
+        </activity>
+        <activity android:name="hsd.symptom.checker.ProfileEditActivity" >
+        </activity>
+        <activity android:name="com.facebook.LoginActivity" />
+
+        <receiver android:name="hsd.symptom.checker.services.IncomingSms" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

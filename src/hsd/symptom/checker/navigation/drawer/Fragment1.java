@@ -1,7 +1,8 @@
 package hsd.symptom.checker.navigation.drawer;
 
+import hsd.symptom.checker.FindSymptomsFragment;
 import hsd.symptom.checker.R;
-import hsd.symptom.checker.ShowSpecialityFragment;
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class Fragment1 extends Fragment {
 			relativeLayout_female_front, relativeLayout_female_back;
 	private ImageView imageView_toast_points;
 
+	@SuppressLint("ClickableViewAccessibility")
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -59,9 +61,9 @@ public class Fragment1 extends Fragment {
 						if (event.getAction() == MotionEvent.ACTION_DOWN) {
 							int x = (int) event.getX();
 							int y = (int) event.getY();
-							int colour = getColour(x, y, 1);
+							int colour = getColour(x, y);
 
-							if (Color.rgb(214, 6, 6) == colour) {
+							if (Color.rgb(216, 6, 6) == colour) {
 								// Toast.makeText(getActivity(), "head",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -74,9 +76,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("head", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(112, 22, 201) == colour) {
+							} else if (Color.rgb(114, 21, 202) == colour) {
 								// Toast.makeText(getActivity(), "neck",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -89,9 +92,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("neck", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(81, 71, 92) == colour) {
+							} else if (Color.rgb(81, 70, 92) == colour) {
 								// Toast.makeText(getActivity(), "shoulder",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -104,9 +108,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("shoulder", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(66, 199, 115) == colour) {
+							} else if (Color.rgb(65, 201, 116) == colour) {
 								// Toast.makeText(getActivity(), "arm",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -119,9 +124,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("arm", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(64, 120, 84) == colour) {
+							} else if (Color.rgb(63, 121, 85) == colour) {
 								// Toast.makeText(getActivity(), "hand",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -134,9 +140,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hand", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(45, 223, 250) == colour) {
+							} else if (Color.rgb(43, 230, 252) == colour) {
 								// Toast.makeText(getActivity(), "chest",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -149,9 +156,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("chest", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(181, 126, 24) == colour) {
+							} else if (Color.rgb(183, 128, 22) == colour) {
 								// Toast.makeText(getActivity(), "abdomen",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -164,9 +172,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("abdomen", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(83, 118, 176) == colour) {
+							} else if (Color.rgb(81, 117, 176) == colour) {
 								// Toast.makeText(getActivity(), "pelvis",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -179,9 +188,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("pelvis", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(113, 123, 138) == colour) {
+							} else if (Color.rgb(113, 123, 139) == colour) {
 								// Toast.makeText(getActivity(), "hips",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -194,9 +204,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hips", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(217, 213, 11) == colour) {
+							} else if (Color.rgb(217, 215, 9) == colour) {
 								// Toast.makeText(getActivity(), "leg",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -209,9 +220,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("leg", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(69, 92, 107) == colour) {
+							} else if (Color.rgb(69, 93, 109) == colour) {
 								// Toast.makeText(getActivity(), "feet",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -224,6 +236,7 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("feet", male);
 									}
 								}, 1000);
 							} else {
@@ -254,24 +267,25 @@ public class Fragment1 extends Fragment {
 						if (event.getAction() == MotionEvent.ACTION_DOWN) {
 							int x = (int) event.getX();
 							int y = (int) event.getY();
-							int colour = getColour(x, y, 2);
+							int colour = getColour(x, y);
 
-							if (Color.rgb(214, 6, 6) == colour) {
+							if (Color.rgb(216, 6, 6) == colour) {
 								// Toast.makeText(getActivity(), "head",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
 										.setVisibility(View.VISIBLE);
 								imageView_toast_points
-										.setImageResource(R.drawable.head_points);
+										.setImageResource(R.drawable.head_back_points);
 								new Handler().postDelayed(new Runnable() {
 
 									@Override
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("head", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(112, 22, 201) == colour) {
+							} else if (Color.rgb(114, 21, 202) == colour) {
 								// Toast.makeText(getActivity(), "neck",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -284,9 +298,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("neck", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(81, 71, 92) == colour) {
+							} else if (Color.rgb(81, 70, 92) == colour) {
 								// Toast.makeText(getActivity(), "shoulder",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -299,9 +314,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("shoulder", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(66, 199, 115) == colour) {
+							} else if (Color.rgb(65, 201, 116) == colour) {
 								// Toast.makeText(getActivity(), "arm",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -314,9 +330,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("arm", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(64, 120, 84) == colour) {
+							} else if (Color.rgb(63, 121, 85) == colour) {
 								// Toast.makeText(getActivity(), "hand",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -329,9 +346,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hand", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(45, 223, 250) == colour) {
+							} else if (Color.rgb(43, 230, 252) == colour) {
 								// Toast.makeText(getActivity(), "back",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -344,9 +362,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("back", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(181, 126, 24) == colour) {
+							} else if (Color.rgb(183, 128, 22) == colour) {
 								// Toast.makeText(getActivity(), "lower back",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -359,9 +378,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("lower back", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(83, 118, 176) == colour) {
+							} else if (Color.rgb(81, 117, 176) == colour) {
 								// Toast.makeText(getActivity(), "buttock",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -374,9 +394,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("buttock", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(113, 123, 138) == colour) {
+							} else if (Color.rgb(113, 123, 139) == colour) {
 								// Toast.makeText(getActivity(), "hips",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -389,9 +410,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hips", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(217, 213, 11) == colour) {
+							} else if (Color.rgb(217, 215, 9) == colour) {
 								// Toast.makeText(getActivity(), "leg",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -404,9 +426,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("leg", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(69, 92, 107) == colour) {
+							} else if (Color.rgb(69, 93, 109) == colour) {
 								// Toast.makeText(getActivity(), "feet",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -419,13 +442,14 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("feet", male);
 									}
 								}, 1000);
 							} else {
 								imageView_toast_points
 										.setVisibility(View.VISIBLE);
 								imageView_toast_points
-										.setImageResource(R.drawable.front_points);
+										.setImageResource(R.drawable.back_points);
 								new Handler().postDelayed(new Runnable() {
 
 									@Override
@@ -449,9 +473,9 @@ public class Fragment1 extends Fragment {
 						if (event.getAction() == MotionEvent.ACTION_DOWN) {
 							int x = (int) event.getX();
 							int y = (int) event.getY();
-							int colour = getColour(x, y, 1);
+							int colour = getColour(x, y);
 
-							if (Color.rgb(214, 6, 6) == colour) {
+							if (Color.rgb(216, 6, 6) == colour) {
 								// Toast.makeText(getActivity(), "head",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -464,9 +488,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("head", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(112, 22, 201) == colour) {
+							} else if (Color.rgb(114, 21, 202) == colour) {
 								// Toast.makeText(getActivity(), "neck",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -479,9 +504,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("neck", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(81, 71, 92) == colour) {
+							} else if (Color.rgb(81, 70, 92) == colour) {
 								// Toast.makeText(getActivity(), "shoulder",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -494,9 +520,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("shoulder", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(66, 199, 115) == colour) {
+							} else if (Color.rgb(65, 201, 116) == colour) {
 								// Toast.makeText(getActivity(), "arm",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -509,9 +536,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("arm", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(64, 120, 84) == colour) {
+							} else if (Color.rgb(63, 121, 85) == colour) {
 								// Toast.makeText(getActivity(), "hand",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -524,9 +552,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hand", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(45, 223, 250) == colour) {
+							} else if (Color.rgb(43, 230, 252) == colour) {
 								// Toast.makeText(getActivity(), "chest",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -539,9 +568,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("chest", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(181, 126, 24) == colour) {
+							} else if (Color.rgb(183, 128, 22) == colour) {
 								// Toast.makeText(getActivity(), "abdomen",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -554,9 +584,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("abdomen", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(83, 118, 176) == colour) {
+							} else if (Color.rgb(81, 117, 176) == colour) {
 								// Toast.makeText(getActivity(), "pelvis",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -569,9 +600,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("pelvis", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(113, 123, 138) == colour) {
+							} else if (Color.rgb(113, 123, 139) == colour) {
 								// Toast.makeText(getActivity(), "hips",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -584,9 +616,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hips", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(217, 213, 11) == colour) {
+							} else if (Color.rgb(217, 215, 9) == colour) {
 								// Toast.makeText(getActivity(), "leg",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -599,9 +632,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("leg", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(69, 92, 107) == colour) {
+							} else if (Color.rgb(69, 93, 109) == colour) {
 								// Toast.makeText(getActivity(), "feet",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -614,13 +648,14 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("feet", male);
 									}
 								}, 1000);
 							} else {
 								imageView_toast_points
 										.setVisibility(View.VISIBLE);
 								imageView_toast_points
-										.setImageResource(R.drawable.head_back_points);
+										.setImageResource(R.drawable.front_points);
 								new Handler().postDelayed(new Runnable() {
 
 									@Override
@@ -644,24 +679,25 @@ public class Fragment1 extends Fragment {
 						if (event.getAction() == MotionEvent.ACTION_DOWN) {
 							int x = (int) event.getX();
 							int y = (int) event.getY();
-							int colour = getColour(x, y, 2);
+							int colour = getColour(x, y);
 
-							if (Color.rgb(214, 6, 6) == colour) {
+							if (Color.rgb(216, 6, 6) == colour) {
 								// Toast.makeText(getActivity(), "head",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
 										.setVisibility(View.VISIBLE);
 								imageView_toast_points
-										.setImageResource(R.drawable.head_points);
+										.setImageResource(R.drawable.head_back_points);
 								new Handler().postDelayed(new Runnable() {
 
 									@Override
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("head", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(112, 22, 201) == colour) {
+							} else if (Color.rgb(114, 21, 202) == colour) {
 								// Toast.makeText(getActivity(), "neck",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -674,9 +710,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("neck", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(81, 71, 92) == colour) {
+							} else if (Color.rgb(81, 70, 92) == colour) {
 								// Toast.makeText(getActivity(), "shoulder",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -689,9 +726,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("shoulder", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(66, 199, 115) == colour) {
+							} else if (Color.rgb(65, 201, 116) == colour) {
 								// Toast.makeText(getActivity(), "arm",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -704,9 +742,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("arm", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(64, 120, 84) == colour) {
+							} else if (Color.rgb(63, 121, 85) == colour) {
 								// Toast.makeText(getActivity(), "hand",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -719,9 +758,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hand", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(45, 223, 250) == colour) {
+							} else if (Color.rgb(43, 230, 252) == colour) {
 								// Toast.makeText(getActivity(), "back",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -734,9 +774,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("back", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(181, 126, 24) == colour) {
+							} else if (Color.rgb(183, 128, 22) == colour) {
 								// Toast.makeText(getActivity(), "lower back",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -749,9 +790,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("lower back", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(83, 118, 176) == colour) {
+							} else if (Color.rgb(81, 117, 176) == colour) {
 								// Toast.makeText(getActivity(), "buttock",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -764,9 +806,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("buttock", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(113, 123, 138) == colour) {
+							} else if (Color.rgb(113, 123, 139) == colour) {
 								// Toast.makeText(getActivity(), "hips",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -779,9 +822,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("hips", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(217, 213, 11) == colour) {
+							} else if (Color.rgb(217, 215, 9) == colour) {
 								// Toast.makeText(getActivity(), "leg",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -794,9 +838,10 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("leg", male);
 									}
 								}, 1000);
-							} else if (Color.rgb(69, 92, 107) == colour) {
+							} else if (Color.rgb(69, 93, 109) == colour) {
 								// Toast.makeText(getActivity(), "feet",
 								// Toast.LENGTH_SHORT).show();
 								imageView_toast_points
@@ -809,13 +854,14 @@ public class Fragment1 extends Fragment {
 									public void run() {
 										imageView_toast_points
 												.setVisibility(View.GONE);
+										navigateTo("feet", male);
 									}
 								}, 1000);
 							} else {
 								imageView_toast_points
 										.setVisibility(View.VISIBLE);
 								imageView_toast_points
-										.setImageResource(R.drawable.head_back_points);
+										.setImageResource(R.drawable.back_points);
 								new Handler().postDelayed(new Runnable() {
 
 									@Override
@@ -915,14 +961,14 @@ public class Fragment1 extends Fragment {
 		Bundle args = new Bundle();
 		args.putString("part", part);
 		args.putBoolean("gender", gender);
-		ShowSpecialityFragment showSpecialityFragment = new ShowSpecialityFragment();
-		showSpecialityFragment.setArguments(args);
+		FindSymptomsFragment findSymptomsFragment = new FindSymptomsFragment();
+		findSymptomsFragment.setArguments(args);
 		getActivity().getSupportFragmentManager().beginTransaction()
-				.replace(R.id.container, showSpecialityFragment)
+				.replace(R.id.container, findSymptomsFragment)
 				.addToBackStack(null).commit();
 	}
 
-	private int getColour(int x, int y, int i) {
+	private int getColour(int x, int y) {
 		ImageView img = (ImageView) content
 				.findViewById(R.id.imageView_main_points);
 		img.setDrawingCacheEnabled(true);

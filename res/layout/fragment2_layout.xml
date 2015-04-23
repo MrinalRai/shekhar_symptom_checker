@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -32,7 +32,7 @@
                     android:text="@string/age"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_show_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textViewAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
                     android:layout_alignParentStart="true"
                     android:orientation="horizontal" >
 
-                    <TextView
+                    <hsd.symptom.checker.textview.RalewayTextView
                         android:id="@+id/textView_leftspinner_ht"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
                         android:src="@drawable/ic_down" />
                 </LinearLayout>
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_show_height"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textViewHeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -180,7 +180,7 @@
                     android:layout_alignParentStart="true"
                     android:orientation="horizontal" >
 
-                    <TextView
+                    <hsd.symptom.checker.textview.RalewayTextView
                         android:id="@+id/textView_leftspinner_wt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
                         android:src="@drawable/ic_down" />
                 </LinearLayout>
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_show_weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -230,7 +230,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textViewWeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -259,7 +259,7 @@
             android:orientation="horizontal"
             android:paddingTop="15dp" >
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textView_bmi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -268,7 +268,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@android:color/black" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textView_bmi_val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -281,7 +281,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#F68D23" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textView_you_fall_bmi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -290,7 +290,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge" />
         </LinearLayout>
 
-        <TextView
+        <hsd.symptom.checker.textview.RalewayTextView
             android:id="@+id/textView_show_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -315,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_underweight"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -325,7 +325,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_underweight_val"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -341,7 +341,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_normal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -351,7 +351,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_normal_val"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -367,7 +367,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_overweight"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -377,7 +377,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_overweight_val"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -393,7 +393,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_obese"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -403,7 +403,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_obese_val"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -419,7 +419,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_overobese"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -429,7 +429,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@android:color/black" />
 
-                <TextView
+                <hsd.symptom.checker.textview.RalewayTextView
                     android:id="@+id/textView_overobese_val"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"

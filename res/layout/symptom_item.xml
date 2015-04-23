@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:paddingBottom="5dp" >
 
-    <TextView
+    <hsd.symptom.checker.textview.RalewayTextView
         android:id="@+id/textView_symptom_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
-    <TextView
+    <hsd.symptom.checker.textview.RalewayTextView
         android:id="@+id/textView_symptom_cname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

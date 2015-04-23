@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:orientation="vertical" >
 
-        <TextView
+        <hsd.symptom.checker.textview.RalewayTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:orientation="vertical" >
 
-            <EditText
+            <hsd.symptom.checker.textview.RalewayEditText
                 android:id="@+id/editText_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,9 +34,9 @@
                 android:gravity="center"
                 android:hint="@string/name_hint"
                 android:inputType="text" >
-            </EditText>
+            </hsd.symptom.checker.textview.RalewayEditText>
 
-            <EditText
+            <hsd.symptom.checker.textview.RalewayEditText
                 android:id="@+id/editText_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 android:hint="@string/pass_hint"
                 android:inputType="textPassword" />
 
-            <EditText
+            <hsd.symptom.checker.textview.RalewayEditText
                 android:id="@+id/editText_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                 android:inputType="phone"
                 android:maxLength="10" />
 
-            <EditText
+            <hsd.symptom.checker.textview.RalewayEditText
                 android:id="@+id/editText_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

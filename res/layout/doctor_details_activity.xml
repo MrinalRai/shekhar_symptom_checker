@@ -3,21 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:clickable="true"
     android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:orientation="vertical" >
+        android:orientation="horizontal" >
 
         <RelativeLayout
             android:id="@+id/doc"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center"
-            android:visibility="gone" >
+            android:padding="5dp" >
 
             <ImageView
                 android:id="@+id/circularImageView"
@@ -26,7 +27,7 @@
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/no_image" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewInitials"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -42,42 +43,49 @@
                 android:src="@drawable/round" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textViewName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/black" />
-
-        <TextView
-            android:id="@+id/textViewSpeciality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <TextView
-            android:id="@+id/textViewFee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/darker_gray" />
-
         <LinearLayout
-            android:id="@+id/linearLayoutLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:textColor="@android:color/white" >
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <hsd.symptom.checker.textview.RalewayTextView
+                android:id="@+id/textViewName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black" />
+
+            <hsd.symptom.checker.textview.RalewayTextView
+                android:id="@+id/textViewSpeciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <hsd.symptom.checker.textview.RalewayTextView
+                android:id="@+id/textViewFee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Medium Text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:textColor="@android:color/white" >
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
@@ -96,7 +104,7 @@
             android:orientation="horizontal"
             android:visibility="gone" >
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewSelectArea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,7 +121,7 @@
                 android:layout_toRightOf="@+id/textViewSelectArea" />
         </RelativeLayout>
 
-        <TextView
+        <hsd.symptom.checker.textview.RalewayTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
@@ -129,7 +137,7 @@
             android:background="@color/primary"
             android:padding="10dp" >
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewSelectDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -137,7 +145,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="30dp" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewSelectDateth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -147,7 +155,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewSelectDay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -162,7 +170,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewSelectMonth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -178,7 +186,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="18dp" />
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewSelectYear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -193,7 +201,7 @@
                 android:textSize="35dp" />
         </RelativeLayout>
 
-        <TextView
+        <hsd.symptom.checker.textview.RalewayTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
@@ -206,7 +214,7 @@
             android:layout_height="wrap_content"
             android:background="@color/primary" >
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewMorning"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -227,7 +235,7 @@
                 android:background="@android:color/white" >
             </LinearLayout>
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewAfternoon"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -248,7 +256,7 @@
                 android:background="@android:color/white" >
             </LinearLayout>
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewEvening"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -269,7 +277,7 @@
                 android:background="@android:color/white" >
             </LinearLayout>
 
-            <TextView
+            <hsd.symptom.checker.textview.RalewayTextView
                 android:id="@+id/textViewNight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -321,6 +329,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" >
                 </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                </LinearLayout>
             </RelativeLayout>
         </ScrollView>
     </LinearLayout>

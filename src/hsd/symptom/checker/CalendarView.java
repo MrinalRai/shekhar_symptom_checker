@@ -10,8 +10,6 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -149,9 +147,6 @@ public class CalendarView extends FragmentActivity {
 
 		});
 		buttonNext.setOnClickListener(new OnClickListener() {
-
-			Fragment fragment;
-			FragmentTransaction ft;
 
 			@SuppressLint("NewApi")
 			@Override

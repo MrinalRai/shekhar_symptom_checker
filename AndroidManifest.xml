@@ -18,13 +18,15 @@
     <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
+        android:name="hsd.symptom.checker.GlobalClass"
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/CustomTheme" >
         <activity
             android:name="hsd.symptom.checker.Splash_Screen_Activity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:padding="10dp" >
 
-        <TextView
+        <hsd.symptom.checker.textview.RalewayTextView
             android:id="@+id/textView_edit_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,6 +36,15 @@
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/no_image" />
 
+            <hsd.symptom.checker.textview.RalewayTextView
+                android:id="@+id/textViewInitials"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -44,79 +53,86 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/black" />
+        android:orientation="vertical"
+        android:padding="10dp" >
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/black" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:id="@+id/textView_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/blood_group"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/primary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
 
-    <TextView
-        android:id="@+id/textViewBloodGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/blood_group"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/black" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_group"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:id="@+id/textViewBloodGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_group"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/allergies"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/primary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
 
-    <TextView
-        android:id="@+id/textViewAllergies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/allergies"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/black" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allergies"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:id="@+id/textViewAllergies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allergies"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
 
-    <TextView
-        android:id="@+id/textViewPrimaryMedicalConditions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/primary_medical_conditions"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@color/primary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/primary_medical_conditions"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="@android:color/black" />
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/primary_medical_conditions"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primary" />
+
+        <hsd.symptom.checker.textview.RalewayTextView
+            android:id="@+id/textViewPrimaryMedicalConditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/primary_medical_conditions"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
 
 </LinearLayout>

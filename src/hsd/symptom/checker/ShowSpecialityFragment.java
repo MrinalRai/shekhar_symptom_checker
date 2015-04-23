@@ -37,20 +37,8 @@ public class ShowSpecialityFragment extends Fragment {
 
 		fetchList = removeDuplicates(fetchList);
 
-		if (fetchList.contains("default")) {
-			fetchList.remove("default");
-			fetchList.add("General");
-		}
-		if (fetchList.contains("default")) {
-			fetchList.remove("default");
-			fetchList.add("General Doctor");
-		}
-		if (fetchList.contains("default")) {
-			fetchList.remove("default");
-			fetchList.add("General Doctor");
-		}
-		if (fetchList.contains("")) {
-			fetchList.remove("");
+		if (fetchList.contains("null")) {
+			fetchList.remove("null");
 		}
 
 		listView_speciality = (ListView) content
@@ -91,7 +79,7 @@ public class ShowSpecialityFragment extends Fragment {
 				DoctorListingFragment doctorListingFragment = new DoctorListingFragment();
 				doctorListingFragment.setArguments(args);
 				getActivity().getSupportFragmentManager().beginTransaction()
-						.replace(R.id.container, doctorListingFragment)
+						.add(R.id.container, doctorListingFragment)
 						.addToBackStack(null).commit();
 			}
 		});

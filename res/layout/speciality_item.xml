@@ -14,7 +14,7 @@
         android:contentDescription="@string/app_name"
         android:src="@drawable/general_practitioner" />
 
-    <TextView
+    <hsd.symptom.checker.textview.RalewayTextView
         android:id="@+id/textView_speciality"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:paddingTop="3dp"
         android:textSize="20sp" />
 
-    <TextView
+    <hsd.symptom.checker.textview.RalewayTextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray" />

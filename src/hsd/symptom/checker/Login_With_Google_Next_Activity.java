@@ -1,7 +1,5 @@
 package hsd.symptom.checker;
 
-import hsd.symptom.checker.constant.Constant;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,8 +9,6 @@ import org.json.JSONObject;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;

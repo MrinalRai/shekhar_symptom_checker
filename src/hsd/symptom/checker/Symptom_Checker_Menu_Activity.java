@@ -3,6 +3,8 @@ package hsd.symptom.checker;
 import hsd.symptom.checker.constant.Constant;
 import hsd.symptom.checker.navigation.drawer.Fragment1;
 import hsd.symptom.checker.navigation.drawer.Fragment2;
+import hsd.symptom.checker.navigation.drawer.FragmentMyAppointments;
+import hsd.symptom.checker.navigation.drawer.FragmentSettings;
 import hsd.symptom.checker.navigation.drawer.NavigationDrawerFragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -67,7 +69,21 @@ public class Symptom_Checker_Menu_Activity extends ActionBarActivity implements
 					.replace(R.id.container, new Fragment2()).commit();
 			toolbar.setTitle("BMI Calculator");
 			break;
+		case 2:
+			fragmentManager.popBackStack(null,
+					FragmentManager.POP_BACK_STACK_INCLUSIVE);
+			fragmentManager.beginTransaction()
+					.replace(R.id.container, new FragmentMyAppointments()).commit();
+			toolbar.setTitle("My Appointments");
+			break;
 		case 3:
+			fragmentManager.popBackStack(null,
+					FragmentManager.POP_BACK_STACK_INCLUSIVE);
+			fragmentManager.beginTransaction()
+					.replace(R.id.container, new FragmentSettings()).commit();
+			toolbar.setTitle("Settings");
+			break;
+		case 4:
 			SharedPreferences prefs = getSharedPreferences(
 					Constant.MyPREFERENCES, MODE_PRIVATE);
 			prefs.edit().clear().commit();

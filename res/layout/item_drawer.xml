@@ -12,14 +12,14 @@
         android:contentDescription="@string/app_name"
         android:src="@drawable/ic_launcher" />
 
-    <TextView
+    <hsd.symptom.checker.textview.RalewayTextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/black" />
 
-    <TextView
+    <hsd.symptom.checker.textview.RalewayTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black" />

@@ -96,6 +96,17 @@
         <item>KG</item>
         <item>PD</item>
 	</string-array>
+     
+     <string-array name="blood_group">
+        <item>O+</item>
+        <item>O-</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+	</string-array>
 	
     <string name="underweight">Underweight</string>
     <string name="normal">Normal</string>
@@ -123,7 +134,8 @@
     <string name="host_url">http://174.122.37.171/android/symptom_checker/</string>
     <string name="host_url1">http://www.healthserve.in/android/symptom_checker/</string>
     <string name="login_check_php">login_check.php</string>
-    <string name="get_symptoms_php">get_symptoms.php</string>
+    <!--<string name="get_symptoms_php">get_symptoms.php</string>-->
+    <string name="get_symptoms_php">v_get_symptoms.php</string>
     <string name="get_doctor_php">get_doctor.php</string>
     <string name="get_particular_doctor_php">get_particular_doctor.php</string>
     <string name="get_test_php">test.php</string>
@@ -133,14 +145,36 @@
     <string name="get_register_user_with_otp_php">register_user_with_otp.php</string>
     <string name="check_otp_php">check_otp.php</string>
     <string name="vtest_php">vtest.php</string>
+    <string name="book_appointment_php">book_appointment.php</string>
     
     <string name="dot">.</string>
-    <string name="blank">    </string>
+    <string name="blank">   </string>
     <string name="about_healthserve">About Health Serve</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="save">Save</string>
     <string name="blood_group">Blood Group</string>
     <string name="allergies">Allergies</string>
-    <string name="primary_medical_conditions">Primary Medical Conditions</string>
+    <string name="primary_medical_conditions">Primary Medical Conditions</string>     
+    
+    <string name="eyes">Eyes</string>
+    <string name="ears">Ears</string>
+    <string name="nose">Nose</string>
+    <string name="mouth">Mouth</string>
+    <string name="teeth">Teeth</string> 
+    <string name="face">Face</string> 
+    
+    <string name="pateint">Patient</string>
+    <string name="doctor">Doctor</string>
+    <string name="reason">Reason</string>
+    <string name="location">Location</string>
+    <string name="time">Time</string>
+    <string name="confirm">Confirm</string>
+    <string name="view_profile">View Profile</string>
+    
+	<string name="tab_upcoming">Upcoming</string>
+	<string name="tab_past">Past</string>
+	
+	<string name="no_upcoming">No Upcoming Appointments</string>
+	<string name="no_past">No Past Appointments</string>
 
 </resources>

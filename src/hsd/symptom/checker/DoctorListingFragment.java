@@ -310,7 +310,7 @@ public class DoctorListingFragment extends Fragment {
 					doctorDetailsFragment.setArguments(args);
 					getActivity().getSupportFragmentManager()
 							.beginTransaction()
-							.add(R.id.container, doctorDetailsFragment)
+							.replace(R.id.container, doctorDetailsFragment)
 							.addToBackStack(null).commit();
 				}
 			});

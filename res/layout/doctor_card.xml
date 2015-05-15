@@ -18,7 +18,7 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/no_image" />
 
-        <hsd.symptom.checker.textview.RalewayTextView
+        <TextView
             android:id="@+id/textViewInitials"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -48,7 +48,7 @@
             android:orientation="vertical"
             android:textColor="@android:color/white" >
 
-            <hsd.symptom.checker.textview.RalewayTextView
+            <TextView
                 android:id="@+id/textViewName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:text="Medium Text"
                 android:textColor="@android:color/black" />
 
-            <hsd.symptom.checker.textview.RalewayTextView
+            <TextView
                 android:id="@+id/textViewSpeciality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,9 +71,6 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 android:textColor="@android:color/white" >
 
@@ -82,12 +79,17 @@
                     android:layout_height="20dp"
                     android:layout_gravity="center"
                     android:contentDescription="@string/app_name"
+                    android:paddingTop="5dp"
                     android:src="@drawable/bar_indicator" />
 
-                <hsd.symptom.checker.textview.RalewayTextView
+                <TextView
                     android:id="@+id/textViewLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:paddingTop="5dp"
                     android:text="Medium Text"
                     android:textColor="@android:color/black" />
             </LinearLayout>

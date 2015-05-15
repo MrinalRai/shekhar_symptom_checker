@@ -86,7 +86,7 @@ public class DoctorDetailsFragment extends Fragment {
 			textViewNight;
 
 	private String session;
-	private LinearLayout linearLayoutLocation, linearLayout_empty;
+	private LinearLayout linearLayoutLocation;
 
 	private RelativeLayout relativeLayoutDateSelector;
 
@@ -131,7 +131,7 @@ public class DoctorDetailsFragment extends Fragment {
 		table_evening.setVisibility(View.GONE);
 		table_night.setVisibility(View.GONE);
 
-		width = (int) (display.widthPixels / 2.1);
+		width = (int) (display.widthPixels / 2.5);
 		layoutParamsWrapWidth = new TableRow.LayoutParams(
 				TableRow.LayoutParams.WRAP_CONTENT, width / 5);
 		layoutParams = new TableRow.LayoutParams(width, width / 5);
@@ -157,8 +157,6 @@ public class DoctorDetailsFragment extends Fragment {
 		// .findViewById(R.id.textViewLocation);
 		linearLayoutLocation = (LinearLayout) content
 				.findViewById(R.id.linearLayoutLocation);
-		linearLayout_empty = (LinearLayout) content
-				.findViewById(R.id.linearLayout_empty);
 		textViewSelectDate = (TextView) content
 				.findViewById(R.id.textViewSelectDate);
 		textViewSelectDay = (TextView) content
@@ -186,43 +184,6 @@ public class DoctorDetailsFragment extends Fragment {
 				table_afternoon.setVisibility(View.GONE);
 				table_evening.setVisibility(View.GONE);
 				table_night.setVisibility(View.GONE);
-
-				for (int iq = 0; iq < table_afternoon.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_afternoon
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_evening.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_evening
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_night.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_night
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
 			}
 		});
 
@@ -236,43 +197,6 @@ public class DoctorDetailsFragment extends Fragment {
 				table_afternoon.setVisibility(View.VISIBLE);
 				table_evening.setVisibility(View.GONE);
 				table_night.setVisibility(View.GONE);
-
-				for (int iq = 0; iq < table_morning.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_morning
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_evening.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_evening
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_night.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_night
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
 			}
 		});
 		textViewEvening.setOnClickListener(new OnClickListener() {
@@ -285,43 +209,6 @@ public class DoctorDetailsFragment extends Fragment {
 				table_afternoon.setVisibility(View.GONE);
 				table_evening.setVisibility(View.VISIBLE);
 				table_night.setVisibility(View.GONE);
-
-				for (int iq = 0; iq < table_morning.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_morning
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_afternoon.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_afternoon
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_night.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_night
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
 			}
 		});
 		textViewNight.setOnClickListener(new OnClickListener() {
@@ -334,43 +221,6 @@ public class DoctorDetailsFragment extends Fragment {
 				table_afternoon.setVisibility(View.GONE);
 				table_evening.setVisibility(View.GONE);
 				table_night.setVisibility(View.VISIBLE);
-
-				for (int iq = 0; iq < table_morning.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_morning
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_afternoon.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_afternoon
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
-				for (int iq = 0; iq < table_evening.getChildCount(); iq++) {
-					ViewGroup parentchild = (ViewGroup) table_evening
-							.getChildAt(iq);
-					if (parentchild != null) {
-						for (int iq1 = 0; iq1 < parentchild.getChildCount(); iq1++) {
-							TextView tvc = (TextView) parentchild
-									.getChildAt(iq1);
-							tvc.setCompoundDrawablesWithIntrinsicBounds(
-									R.drawable.ic_unselect, 0, 0, 0);
-						}
-					}
-				}
 			}
 		});
 
@@ -390,6 +240,28 @@ public class DoctorDetailsFragment extends Fragment {
 		textViewSelectDateth.setText("" + getPoster(dayOfMonth));
 		textViewSelectMonth.setText("" + getMonthForInt(month));
 		textViewSelectYear.setText("" + year);
+
+		// button_confirm.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View v) {
+		// Intent next = new Intent(getActivity(),
+		// ConfirmAppointmentActivity.class);
+		// next.putExtra("Patient", "Patient Name: SheKhar Khandeparkar");
+		// next.putExtra("Reason", "Reason: Blur Vision");
+		// next.putExtra("Doctor", "Doctor Name: "
+		// + textViewName.getText().toString());
+		// // next.putExtra("Place", textviewArea.getText().toString() +
+		// // "");
+		// // next.putExtra("Date", textviewDayDate.getText().toString() +
+		// // "");
+		// // next.putExtra("Time",
+		// // textviewSessionTime.getText().toString()
+		// // + "");
+		// startActivity(next);
+		//
+		// }
+		// });
 
 		relativeLayoutDateSelector.setOnClickListener(new OnClickListener() {
 
@@ -421,12 +293,12 @@ public class DoctorDetailsFragment extends Fragment {
 				args.putString("doctor_name", textViewName.getText().toString());
 				args.putString("reason", "reason");
 				args.putString("location_selected", location_selected);
-				args.putString("time_selected", time_selected);
+				args.putString("time_selected", date_selected);
 				args.putString("session", session);
 				ConfirmAppointmentFragment confirmAppointmentFragment = new ConfirmAppointmentFragment();
 				confirmAppointmentFragment.setArguments(args);
 				getActivity().getSupportFragmentManager().beginTransaction()
-						.add(R.id.container, confirmAppointmentFragment)
+						.replace(R.id.container, confirmAppointmentFragment)
 						.addToBackStack(null).commit();
 			}
 		});
@@ -470,7 +342,7 @@ public class DoctorDetailsFragment extends Fragment {
 		}
 	}
 
-	private void findDoctorsSchedule(final int doc_id, final String date) {
+	private void findDoctorsSchedule(int doc_id2, final String string) {
 		pd.show();
 		String url = getResources().getString(R.string.host_url) + ""
 				+ getResources().getString(R.string.vtest_php);
@@ -494,9 +366,17 @@ public class DoctorDetailsFragment extends Fragment {
 			@Override
 			protected Map<String, String> getParams() throws AuthFailureError {
 
+				JSONObject myo = new JSONObject();
+				try {
+					myo.put("doc_id", doc_id);
+					myo.put("date_sent", string);
+
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
 				Map<String, String> map = new HashMap<String, String>();
-				map.put("doc_id", doc_id + "");
-				map.put("date_sent", date);
+				map.put("doc_id_detail", myo.toString());
+				Log.e("doc_id_detail", myo.toString());
 				return map;
 			}
 		};
@@ -544,7 +424,6 @@ public class DoctorDetailsFragment extends Fragment {
 	}
 
 	private void processData(String response) {
-		Log.e("res", response + "");
 
 		textViewMorning.setEnabled(true);
 		textViewAfternoon.setEnabled(true);
@@ -555,6 +434,7 @@ public class DoctorDetailsFragment extends Fragment {
 		table_afternoon.removeAllViews();
 		table_evening.removeAllViews();
 		table_night.removeAllViews();
+
 		JSONObject object = null;
 		try {
 			object = new JSONObject(response);
@@ -683,30 +563,18 @@ public class DoctorDetailsFragment extends Fragment {
 						}
 						textView.setTextColor(getResources().getColor(
 								R.color.primary));
-						location_selected = ((TextView) v).getText().toString();
+						location_selected = textView.getText().toString();
 						getTimeTable(scheduleString, textView.getText()
 								.toString());
 					}
 				});
 				linearLayoutLocation.addView(textView);
+
 			}
 
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-
-		for (int i = 0; i < linearLayoutLocation.getChildCount(); i++) {
-			try {
-				View children = linearLayoutLocation.getChildAt(i);
-				if (children.getClass() == TextView.class) {
-					((TextView) children).performClick();
-					break;
-				}
-			} catch (NotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 	}
 
@@ -736,83 +604,79 @@ public class DoctorDetailsFragment extends Fragment {
 			}
 			Log.e("clinic_area", "clinic_area => " + clinic_area);
 			if (clinic_name.equals(clinic_area)) {
-				if (!loc_schdule.equals("[]")) {
+				try {
+					scheduleString2 = new JSONObject(loc_schdule);
+				} catch (JSONException e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
+				Iterator<String> keys = scheduleString2.keys();
+
+				while (keys.hasNext()) {
+					// loop to get the dynamic key
+
+					String currentDynamicKey = (String) keys.next();
+
+					// get the value of the dynamic key
+					JSONObject currentDynamicValue = null;
 					try {
-						scheduleString2 = new JSONObject(loc_schdule);
-					} catch (JSONException e3) {
+						currentDynamicValue = scheduleString2
+								.getJSONObject(currentDynamicKey);
+					} catch (JSONException e2) {
 						// TODO Auto-generated catch block
-						e3.printStackTrace();
+						e2.printStackTrace();
 					}
-					Iterator<String> keys = scheduleString2.keys();
 
-					while (keys.hasNext()) {
+					Log.e("date", currentDynamicKey.toString());
+
+					Iterator<String> keysDT = currentDynamicValue.keys();
+
+					while (keysDT.hasNext()) {
 						// loop to get the dynamic key
-
-						String currentDynamicKey = (String) keys.next();
-
+						String currentDynamicKeyTime = (String) keysDT.next();
 						// get the value of the dynamic key
-						JSONObject currentDynamicValue = null;
+						JSONObject currentDynamicsLOT = null;
 						try {
-							currentDynamicValue = scheduleString2
-									.getJSONObject(currentDynamicKey);
-						} catch (JSONException e2) {
+							currentDynamicsLOT = currentDynamicValue
+									.getJSONObject(currentDynamicKeyTime);
+						} catch (JSONException e1) {
 							// TODO Auto-generated catch block
-							e2.printStackTrace();
+							e1.printStackTrace();
 						}
 
-						Log.e("date", currentDynamicKey.toString());
+						// Log.e("time", currentDynamicKeyTime);
+						// Log.e("slot", currentDynamicsLOT.toString());
 
-						Iterator<String> keysDT = currentDynamicValue.keys();
+						Iterator<String> keysSlots = currentDynamicsLOT.keys();
 
-						while (keysDT.hasNext()) {
-							// loop to get the dynamic key
-							String currentDynamicKeyTime = (String) keysDT
+						ArrayList<String> timings = new ArrayList<>();
+						while (keysSlots.hasNext()) {
+							String currentDynamicKeySlots = (String) keysSlots
 									.next();
-							// get the value of the dynamic key
-							JSONObject currentDynamicsLOT = null;
+							// Log.e("keysSlots", currentDynamicKeySlots);
+
 							try {
-								currentDynamicsLOT = currentDynamicValue
-										.getJSONObject(currentDynamicKeyTime);
-							} catch (JSONException e1) {
-								// TODO Auto-generated catch block
-								e1.printStackTrace();
-							}
-
-							// Log.e("time", currentDynamicKeyTime);
-							// Log.e("slot", currentDynamicsLOT.toString());
-
-							Iterator<String> keysSlots = currentDynamicsLOT
-									.keys();
-
-							ArrayList<String> timings = new ArrayList<>();
-							while (keysSlots.hasNext()) {
-								String currentDynamicKeySlots = (String) keysSlots
-										.next();
-								// Log.e("keysSlots", currentDynamicKeySlots);
-
-								try {
-									if (currentDynamicsLOT.getString(
-											currentDynamicKeySlots).length() != 11) {
-										timings.add("0"
-												+ currentDynamicsLOT
-														.getString(currentDynamicKeySlots));
-									} else {
-										timings.add(currentDynamicsLOT
-												.getString(currentDynamicKeySlots));
-									}
-									// Log.e("time check", currentDynamicsLOT
-									// .getString(currentDynamicKeySlots));
-								} catch (JSONException e) {
-									e.printStackTrace();
+								if (currentDynamicsLOT.getString(
+										currentDynamicKeySlots).length() != 11) {
+									timings.add("0"
+											+ currentDynamicsLOT
+													.getString(currentDynamicKeySlots));
+								} else {
+									timings.add(currentDynamicsLOT
+											.getString(currentDynamicKeySlots));
 								}
+								// Log.e("time check", currentDynamicsLOT
+								// .getString(currentDynamicKeySlots));
+							} catch (JSONException e) {
+								e.printStackTrace();
 							}
-
-							Timing mTiming = new Timing();
-							mTiming.setDate(currentDynamicKey);
-							mTiming.setTime(currentDynamicKeyTime);
-							mTiming.setSlots(timings);
-							listMain.add(mTiming);
 						}
+
+						Timing mTiming = new Timing();
+						mTiming.setDate(currentDynamicKey);
+						mTiming.setTime(currentDynamicKeyTime);
+						mTiming.setSlots(timings);
+						listMain.add(mTiming);
 					}
 				}
 			}
@@ -994,8 +858,6 @@ public class DoctorDetailsFragment extends Fragment {
 					textView.setTextSize(20);
 					textView.setText(timeArray.get(j2));
 					textView.setTextColor(Color.BLACK);
-					textView.setCompoundDrawablesWithIntrinsicBounds(
-							R.drawable.ic_unselect, 0, 0, 0);
 					contentRow.addView(textView);
 					textView.setOnClickListener(new OnClickListener() {
 
@@ -1018,43 +880,9 @@ public class DoctorDetailsFragment extends Fragment {
 								e.printStackTrace();
 							}
 							time_selected = ((TextView) v).getText().toString();
-							ViewGroup parent = (ViewGroup) v.getParent();
-							ViewGroup parentSParent = (ViewGroup) parent
-									.getParent();
-							if (parentSParent != null) {
-								for (int iq = 0; iq < parentSParent
-										.getChildCount(); iq++) {
-									ViewGroup parentchild = (ViewGroup) parentSParent
-											.getChildAt(iq);
-									if (parentchild != null) {
-										for (int iq1 = 0; iq1 < parentchild
-												.getChildCount(); iq1++) {
-											TextView tvc = (TextView) parentchild
-													.getChildAt(iq1);
-											tvc.setCompoundDrawablesWithIntrinsicBounds(
-													R.drawable.ic_unselect, 0,
-													0, 0);
-										}
-									}
-								}
-							}
-							// if (parent != null) {
-							// for (int iq = 0; iq < parent.getChildCount();
-							// iq++) {
-							// time_selected = ((TextView) v).getText()
-							// .toString();
-							// TextView tvc = (TextView) parent
-							// .getChildAt(iq);
-							// tvc.setCompoundDrawablesWithIntrinsicBounds(
-							// R.drawable.ic_unselect, 0, 0, 0);
-							// }
-							// }
-							((TextView) v)
-									.setCompoundDrawablesWithIntrinsicBounds(
-											R.drawable.ic_selected, 0, 0, 0);
-							// Toast.makeText(getActivity(),
-							// ((TextView) v).getText().toString(),
-							// Toast.LENGTH_LONG).show();
+							Toast.makeText(getActivity(),
+									((TextView) v).getText().toString(),
+									Toast.LENGTH_LONG).show();
 						}
 					});
 
@@ -1177,11 +1005,6 @@ public class DoctorDetailsFragment extends Fragment {
 				} else {
 					if (textViewNight.isEnabled()) {
 						textViewNight.performClick();
-					} else {
-						TextView textView_empty = new TextView(getActivity());
-						textView_empty.setGravity(Gravity.CENTER);
-						textView_empty.setText("No Schedules");
-						linearLayout_empty.addView(textView_empty);
 					}
 				}
 			}

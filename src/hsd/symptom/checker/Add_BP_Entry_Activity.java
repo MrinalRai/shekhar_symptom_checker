@@ -119,8 +119,8 @@ public class Add_BP_Entry_Activity extends FragmentActivity {
 	private List<Fragment> getFragments() {
 		List<Fragment> fList = new ArrayList<Fragment>();
 
-		// fList.add(new BP_Graph_View());
-		// fList.add(new BP_List_View());
+		fList.add(new BP_Graph_View());
+		fList.add(new BP_List_View());
 
 		return fList;
 	}

@@ -33,15 +33,6 @@
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/no_image" />
 
-                <hsd.symptom.checker.textview.RalewayTextView
-                    android:id="@+id/textViewInitials"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@android:color/white" />
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -52,36 +43,35 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="1dp"
-                android:layout_marginStart="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
                 android:orientation="vertical" >
 
-                <hsd.symptom.checker.textview.RalewayTextView
-                    android:id="@+id/textView_name"
+                <TextView
+                    android:id="@+id/textView1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
                     android:text="Small Text"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@android:color/white" />
 
-                <hsd.symptom.checker.textview.RalewayTextView
-                    android:id="@+id/textView_email"
+                <TextView
+                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
                     android:text="Small Text"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </LinearLayout>
 
-        <hsd.symptom.checker.textview.RalewayTextView
-            android:id="@+id/textView_view_profile"
+        <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:text="@string/view_profile"
+            android:text="Medium Text"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
@@ -95,7 +85,7 @@
         android:divider="#92b2b0b7"
         android:dividerHeight="1dp" />
 
-    <hsd.symptom.checker.textview.RalewayTextView
+    <TextView
         android:id="@+id/textView_about_healthserve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

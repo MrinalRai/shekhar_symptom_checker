@@ -49,8 +49,6 @@ public class FindSymptomsFragment extends Fragment {
 	private ArrayList<Symptom> symptomList;
 	private TextView textView_empty_view, textView_body_part;
 
-	private String part, sub_part;
-
 	public FindSymptomsFragment() {
 	}
 
@@ -99,7 +97,7 @@ public class FindSymptomsFragment extends Fragment {
 				ShowSpecialityFragment showSpecialityFragment = new ShowSpecialityFragment();
 				showSpecialityFragment.setArguments(args);
 				getActivity().getSupportFragmentManager().beginTransaction()
-						.add(R.id.container, showSpecialityFragment)
+						.replace(R.id.container, showSpecialityFragment)
 						.addToBackStack(null).commit();
 
 				// Intent intent = new Intent(getActivity(),
@@ -113,11 +111,7 @@ public class FindSymptomsFragment extends Fragment {
 		mRequestQueue = Volley.newRequestQueue(getActivity());
 
 		Bundle b = getArguments();
-		part = b.getString("part");
-		sub_part = "";
-		if (part.equals("Head")) {
-			sub_part = b.getString("sub_part");
-		}
+		String part = b.getString("part");
 		boolean gender = b.getBoolean("gender", false);
 
 		String gender_string = "";
@@ -186,10 +180,7 @@ public class FindSymptomsFragment extends Fragment {
 
 				JSONObject myo = new JSONObject();
 				try {
-					myo.put("body_part", part);
-					if (part.equals("Head")) {
-						myo.put("sub_part", sub_part);
-					}
+					myo.put("part", part);
 					myo.put("gender", gender);
 
 				} catch (JSONException e) {
@@ -229,32 +220,16 @@ public class FindSymptomsFragment extends Fragment {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			Symptom symptom = null;
 			try {
-				symptom = new Symptom(object.getString("symptom_name"), "",
-						object.getString("speciality1"),
-						object.getString("speciality2"),
-						object.getString("speciality3"));
+				symptomList.add(new Symptom(object.getString("symptom_name"),
+						object.getString("symptom_cname"), object
+								.getString("speciality1"), object
+								.getString("speciality2"), object
+								.getString("speciality3")));
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if (symptom != null) {
-				if (!containsInstance(symptomList, symptom)) {
-					Log.e("symptom", symptom.getSpeciality1());
-					symptomList.add(symptom);
-				}
-			}
 		}
-	}
-
-	public static boolean containsInstance(ArrayList<Symptom> symptomList,
-			Symptom symptom) {
-		for (Symptom e : symptomList) {
-			if (symptom.getName().equals(e.getName())) {
-				return true;
-			}
-		}
-		return false;
 	}
 }

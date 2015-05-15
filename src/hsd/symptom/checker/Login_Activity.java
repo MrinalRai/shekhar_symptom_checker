@@ -985,4 +985,75 @@ public class Login_Activity extends ActionBarActivity implements
 		};
 		mRequestQueue.add(request);
 	}
+
+	private void sendOTPToVerify(final String name, final String email,
+			final String phoneNumber, final String gender, final String password) {
+
+		Log.e("sendOTPToVerify", "sendOTPToVerify called");
+
+		mRequestQueue = Volley.newRequestQueue(this);
+		pd.show();
+		String url = getResources().getString(R.string.host_url)
+				+ ""
+				+ getResources().getString(
+						R.string.get_register_user_with_otp_php);
+		StringRequest request = new StringRequest(Method.POST, url,
+				new Listener<String>() {
+
+					@Override
+					public void onResponse(String response) {
+
+						String otp = "";
+						Log.e("resp", response);
+
+						JSONObject jsonObject;
+						try {
+							jsonObject = new JSONObject(response);
+							otp = jsonObject.getString("otp");
+							Log.e("otp", jsonObject.getString("otp"));
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						pd.cancel();
+						finish();
+						Intent intent = new Intent(Login_Activity.this,
+								CheckSMSAutoActivity.class);
+						intent.putExtra("otp", otp);
+						intent.putExtra("mobileNumber", editText_sign_up_mobile
+								.getText().toString());
+						intent.putExtra("email", editText_sign_up_email
+								.getText().toString());
+						startActivity(intent);
+					}
+				}, new ErrorListener() {
+					@Override
+					public void onErrorResponse(VolleyError error) {
+						VolleyLog.d("TAG", "Error: " + error.getMessage());
+						Toast.makeText(getApplicationContext(), "Error: ",
+								Toast.LENGTH_SHORT).show();
+						pd.cancel();
+					}
+				}) {
+			@Override
+			protected Map<String, String> getParams() throws AuthFailureError {
+				Map<String, String> map = new HashMap<String, String>();
+				map.put("name", name);
+				String[] nameSplit = name.split(" ");
+				map.put("fname", nameSplit[0]);
+				String lastName = "";
+				for (int i = 1; i < nameSplit.length; i++) {
+					lastName = lastName + nameSplit[i] + " ";
+				}
+				map.put("lname", lastName);
+				map.put("email", email);
+				map.put("phoneNumber", phoneNumber);
+				map.put("gender", gender);
+				map.put("password", password);
+				map.put("from", "healthserve");
+				return map;
+			}
+		};
+		mRequestQueue.add(request);
+	}
 }

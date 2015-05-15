@@ -1,6 +1,7 @@
 package hsd.symptom.checker;
 
 import hsd.symptom.checker.database.Timing;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -10,9 +11,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-import android.annotation.SuppressLint;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -24,11 +26,13 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request.Method;
 import com.android.volley.RequestQueue;
@@ -44,19 +48,19 @@ public class ConfirmationActivity extends Activity {
 	private int doc_id;
 	private RequestQueue mRequestQueue;
 	private ProgressDialog pd;
-	String TAG = "DoctorDetailsActivity";
+	private String TAG = "DoctorDetailsActivity";
 	private JSONObject scheduleString;
 
 	private ArrayList<Timing> listSortTimes;
 	private TextView textView;
-	LinearLayout layout_popup;
-	TextView textView_popup, textviewArea, textviewDate, textviewTime;
-	String date_selected, time_selected;
+	private LinearLayout layout_popup;
+	private TextView textView_popup, textviewArea, textviewDate, textviewTime;
+	private String date_selected, time_selected;
 
 	private TableRow.LayoutParams layoutParams, layoutParamsWrapWidth;
 	private int width;
 
-	// private Button button_confirm;
+	private Button button_confirm;
 	private TableLayout table_content;
 
 	@Override
@@ -128,7 +132,6 @@ public class ConfirmationActivity extends Activity {
 		mRequestQueue.add(request);
 	}
 
-	@SuppressLint("SimpleDateFormat")
 	private void processData(String response) {
 		JSONObject object = null;
 		try {

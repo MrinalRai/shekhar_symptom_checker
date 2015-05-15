@@ -1,7 +1,5 @@
 package hsd.symptom.checker;
 
-import hsd.symptom.checker.constant.Constant;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,8 +8,6 @@ import org.json.JSONObject;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -54,22 +50,6 @@ public class CheckSMSManualActivity extends ActionBarActivity {
 		editTextOTP = (EditText) findViewById(R.id.editTextOTP);
 		textviewNumber = (TextView) findViewById(R.id.textviewNumber);
 		textviewNumber.setText(getIntent().getStringExtra("mobileNumber"));
-		String otp = "";
-		try {
-			otp = getIntent().getStringExtra("otp_val");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String otp_recieved = "n";
-		try {
-			otp_recieved = getIntent().getStringExtra("otp_recieved");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		editTextOTP.setText(otp);
 		buttonVerify = (Button) findViewById(R.id.buttonVerify);
 
 		buttonVerify.setOnClickListener(new OnClickListener() {
@@ -80,10 +60,6 @@ public class CheckSMSManualActivity extends ActionBarActivity {
 						editTextOTP.getText().toString());
 			}
 		});
-
-		if (otp_recieved.equals("y")) {
-			buttonVerify.performClick();
-		}
 	}
 
 	private void sendOTPToVerify(final String phoneNumber, final String otp) {
@@ -110,7 +86,7 @@ public class CheckSMSManualActivity extends ActionBarActivity {
 						String has_id = "";
 						Log.e("resp", response);
 
-						JSONObject jsonObject = null;
+						JSONObject jsonObject;
 						try {
 							jsonObject = new JSONObject(response);
 							has_id = jsonObject.getString("has_id");
@@ -123,47 +99,6 @@ public class CheckSMSManualActivity extends ActionBarActivity {
 						if (has_id.equals("true")) {
 							Toast.makeText(getApplicationContext(), "Verified",
 									Toast.LENGTH_LONG).show();
-
-							String user_id = "", user_image = "", user_email = "", display_name = "";
-							try {
-								user_id = jsonObject.getString("user_id");
-							} catch (JSONException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							try {
-								user_image = jsonObject.getString("user_image");
-							} catch (JSONException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							try {
-								user_email = jsonObject.getString("user_email");
-							} catch (JSONException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							try {
-								display_name = jsonObject
-										.getString("display_name");
-							} catch (JSONException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-
-							SharedPreferences prefs = getSharedPreferences(
-									Constant.MyPREFERENCES, MODE_PRIVATE);
-							Editor editor = prefs.edit();
-							editor.putBoolean(Constant.USER_LOGGED_IN, true);
-							editor.putString(Constant.USER_ID, user_id);
-							editor.putString(Constant.USER_LOGGED_IN_NAME,
-									display_name);
-							editor.putString(Constant.USER_LOGGED_IN_EMAIL,
-									user_email);
-							editor.putString(Constant.USER_LOGGED_IN_IMAGE,
-									user_image);
-							editor.commit();
-							finish();
 							startActivity(new Intent(
 									CheckSMSManualActivity.this,
 									Symptom_Checker_Menu_Activity.class));

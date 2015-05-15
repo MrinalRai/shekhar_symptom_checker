@@ -1,28 +1,14 @@
 package hsd.symptom.checker.navigation.drawer;
 
+import hsd.symptom.checker.ProfileEditActivity;
 import hsd.symptom.checker.ProfileViewActivity;
 import hsd.symptom.checker.R;
-import hsd.symptom.checker.constant.Constant;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
@@ -34,9 +20,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -70,8 +54,6 @@ public class NavigationDrawerFragment extends Fragment {
 	private DrawerLayout mDrawerLayout;
 	private View mDrawerView;
 	private ListView mDrawerListView;
-	private ImageView circularImageView;
-	private TextView textViewInitials, textView_name, textView_email;
 	private View mFragmentContainerView;
 
 	private int mCurrentSelectedPosition = 0;
@@ -101,86 +83,6 @@ public class NavigationDrawerFragment extends Fragment {
 				container, false);
 		mDrawerListView = (ListView) mDrawerView
 				.findViewById(R.id.listView_menu);
-
-		DisplayImageOptions options = new DisplayImageOptions.Builder()
-				.showImageOnLoading(R.drawable.no_image)
-				.showImageForEmptyUri(R.drawable.no_image)
-				.showImageOnFail(R.drawable.no_image).cacheInMemory(true)
-				.cacheOnDisk(true).considerExifParams(true)
-				.displayer(new RoundedBitmapDisplayer(20)).build();
-
-		circularImageView = (ImageView) mDrawerView
-				.findViewById(R.id.circularImageView);
-		textViewInitials = (TextView) mDrawerView
-				.findViewById(R.id.textViewInitials);
-		textView_name = (TextView) mDrawerView.findViewById(R.id.textView_name);
-		textView_email = (TextView) mDrawerView
-				.findViewById(R.id.textView_email);
-
-		SharedPreferences prefs = getActivity().getSharedPreferences(
-				Constant.MyPREFERENCES, Context.MODE_PRIVATE);
-		String logged_in_name = prefs.getString(Constant.USER_LOGGED_IN_NAME,
-				"");
-		String logged_in_email = prefs.getString(Constant.USER_LOGGED_IN_EMAIL,
-				"");
-		String logged_in_image = prefs.getString(Constant.USER_LOGGED_IN_IMAGE,
-				"");
-
-		textView_name.setText(logged_in_name);
-		textView_email.setText(logged_in_email);
-
-		String[] splited = logged_in_name.split("\\s+");
-		try {
-			String fName = splited[0];
-			String lName = splited[1];
-			textViewInitials.setText(fName.charAt(0) + "" + lName.charAt(0));
-		} catch (Exception e) {
-		}
-
-		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-				getActivity()).build();
-
-		ImageLoader imageLoader = ImageLoader.getInstance();
-		imageLoader.init(config);
-		imageLoader.displayImage(logged_in_image, circularImageView, options,
-				new ImageLoadingListener() {
-					final List<String> displayedImages = Collections
-							.synchronizedList(new LinkedList<String>());
-
-					@Override
-					public void onLoadingStarted(String imageUri, View view) {
-						// TODO Auto-generated method stub
-						textViewInitials.setVisibility(View.VISIBLE);
-					}
-
-					@Override
-					public void onLoadingFailed(String imageUri, View view,
-							FailReason failReason) {
-						textViewInitials.setVisibility(View.VISIBLE);
-					}
-
-					@Override
-					public void onLoadingComplete(String imageUri, View view,
-							Bitmap loadedImage) {
-						// TODO Auto-generated method stub
-						if (loadedImage != null) {
-							ImageView imageView = (ImageView) view;
-							boolean firstDisplay = !displayedImages
-									.contains(imageUri);
-							if (firstDisplay) {
-								FadeInBitmapDisplayer.animate(imageView, 500);
-								displayedImages.add(imageUri);
-							}
-							textViewInitials.setVisibility(View.GONE);
-						}
-					}
-
-					@Override
-					public void onLoadingCancelled(String imageUri, View view) {
-						// TODO Auto-generated method stub
-					}
-				});
-
 		mDrawerListView
 				.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 					@Override
@@ -195,8 +97,6 @@ public class NavigationDrawerFragment extends Fragment {
 				"Symptom Checker"));
 		drawerItems.add(new NavDrawerItem(R.drawable.ic_bmi_calculator,
 				"BMI Calculator"));
-		drawerItems.add(new NavDrawerItem(R.drawable.ic_book_appointment,
-				"My Appointments"));
 		drawerItems.add(new NavDrawerItem(R.drawable.ic_setting, "Settings"));
 		drawerItems.add(new NavDrawerItem(R.drawable.ic_logout, "Logout"));
 
@@ -209,6 +109,8 @@ public class NavigationDrawerFragment extends Fragment {
 
 					@Override
 					public void onClick(View v) {
+						Toast.makeText(getActivity(), "View Profile",
+								Toast.LENGTH_LONG).show();
 						startActivity(new Intent(getActivity(),
 								ProfileViewActivity.class));
 					}

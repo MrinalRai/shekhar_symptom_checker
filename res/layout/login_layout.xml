@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splashback" >
+    android:background="@drawable/backy" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:gravity="center"
                     android:orientation="vertical" >
 
-                    <hsd.symptom.checker.textview.RalewayEditText
+                    <EditText
                         android:id="@+id/editText_username"
                         android:layout_width="240dp"
                         android:layout_height="42dp"
@@ -62,14 +62,14 @@
                         android:drawableLeft="@drawable/ic_user_name"
                         android:drawableStart="@drawable/ic_user_name"
                         android:ems="10"
-                        android:gravity="start|center_vertical"
+                        android:gravity="center"
                         android:hint="@string/username_hint"
                         android:inputType="text"
                         android:padding="3dp"
                         android:textColor="@android:color/black" >
-                    </hsd.symptom.checker.textview.RalewayEditText>
+                    </EditText>
 
-                    <hsd.symptom.checker.textview.RalewayEditText
+                    <EditText
                         android:id="@+id/editText_password"
                         android:layout_width="240dp"
                         android:layout_height="42dp"
@@ -78,13 +78,13 @@
                         android:drawableLeft="@drawable/ic_password"
                         android:drawableStart="@drawable/ic_password"
                         android:ems="10"
-                        android:gravity="start|center_vertical"
+                        android:gravity="center"
                         android:hint="@string/password_hint"
                         android:inputType="textPassword"
                         android:padding="3dp"
                         android:textColor="@android:color/black" />
 
-                    <hsd.symptom.checker.textview.RalewayButton
+                    <Button
                         android:id="@+id/button_login"
                         android:layout_width="240dp"
                         android:layout_height="42dp"
@@ -93,7 +93,7 @@
                         android:text="@string/login_button"
                         android:textColor="@android:color/white" />
 
-                    <hsd.symptom.checker.textview.RalewayButton
+                    <Button
                         android:id="@+id/button_sign_up"
                         android:layout_width="240dp"
                         android:layout_height="42dp"
@@ -121,7 +121,7 @@
                         android:background="@drawable/transparent_background" >
                     </RelativeLayout>
 
-                    <hsd.symptom.checker.textview.RalewayButton
+                    <Button
                         android:id="@+id/button_google_login"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -146,7 +146,7 @@
                         android:background="@drawable/transparent_background" >
                     </RelativeLayout>
 
-                    <hsd.symptom.checker.textview.RalewayButton
+                    <Button
                         android:id="@+id/button_facebook_login"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
@@ -208,7 +208,7 @@
                 android:gravity="center"
                 android:orientation="vertical" >
 
-                <hsd.symptom.checker.textview.RalewayEditText
+                <EditText
                     android:id="@+id/editText_sign_up_name"
                     android:layout_width="240dp"
                     android:layout_height="42dp"
@@ -216,14 +216,14 @@
                     android:drawableLeft="@drawable/ic_user_name"
                     android:drawableStart="@drawable/ic_user_name"
                     android:ems="10"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center"
                     android:hint="@string/username_hint"
                     android:inputType="text"
                     android:padding="3dp"
                     android:textColor="@android:color/black" >
-                </hsd.symptom.checker.textview.RalewayEditText>
+                </EditText>
 
-                <hsd.symptom.checker.textview.RalewayEditText
+                <EditText
                     android:id="@+id/editText_sign_up_email"
                     android:layout_width="240dp"
                     android:layout_height="42dp"
@@ -231,13 +231,13 @@
                     android:drawableLeft="@drawable/ic_user_name"
                     android:drawableStart="@drawable/ic_user_name"
                     android:ems="10"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center"
                     android:hint="@string/email_hint"
                     android:inputType="textEmailAddress"
                     android:padding="3dp"
                     android:textColor="@android:color/black" />
 
-                <hsd.symptom.checker.textview.RalewayEditText
+                <EditText
                     android:id="@+id/editText_sign_up_mobile"
                     android:layout_width="240dp"
                     android:layout_height="42dp"
@@ -245,14 +245,14 @@
                     android:drawableLeft="@drawable/ic_mobile"
                     android:drawableStart="@drawable/ic_mobile"
                     android:ems="10"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center"
                     android:hint="@string/mobile_hint"
                     android:inputType="phone"
                     android:maxLength="10"
                     android:padding="3dp"
                     android:textColor="@android:color/black" />
 
-                <hsd.symptom.checker.textview.RalewayEditText
+                <EditText
                     android:id="@+id/editText_sign_up_gender"
                     android:layout_width="240dp"
                     android:layout_height="42dp"
@@ -263,13 +263,13 @@
                     android:drawableStart="@drawable/ic_user_name"
                     android:ems="10"
                     android:focusable="false"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center"
                     android:inputType="text"
                     android:singleLine="true"
                     android:textColor="@android:color/black" >
-                </hsd.symptom.checker.textview.RalewayEditText>
+                </EditText>
 
-                <hsd.symptom.checker.textview.RalewayEditText
+                <EditText
                     android:id="@+id/editText_sign_up_password"
                     android:layout_width="240dp"
                     android:layout_height="42dp"
@@ -277,13 +277,13 @@
                     android:drawableLeft="@drawable/ic_password"
                     android:drawableStart="@drawable/ic_password"
                     android:ems="10"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center"
                     android:hint="@string/pass_hint"
                     android:inputType="textPassword"
                     android:padding="3dp"
                     android:textColor="@android:color/black" />
 
-                <hsd.symptom.checker.textview.RalewayEditText
+                <EditText
                     android:id="@+id/editText_sign_up_password_re_enter"
                     android:layout_width="240dp"
                     android:layout_height="42dp"
@@ -291,14 +291,14 @@
                     android:drawableLeft="@drawable/ic_password"
                     android:drawableStart="@drawable/ic_password"
                     android:ems="10"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center"
                     android:hint="@string/re_enter_pass_hint"
                     android:inputType="textPassword"
                     android:padding="3dp"
                     android:textColor="@android:color/black" />
             </LinearLayout>
 
-            <hsd.symptom.checker.textview.RalewayButton
+            <Button
                 android:id="@+id/button_sign_up_sign_up"
                 android:layout_width="240dp"
                 android:layout_height="42dp"
@@ -308,7 +308,7 @@
                 android:text="@string/sign_up"
                 android:textColor="@android:color/white" />
 
-            <hsd.symptom.checker.textview.RalewayButton
+            <Button
                 android:id="@+id/button_login_back"
                 android:layout_width="240dp"
                 android:layout_height="42dp"
@@ -330,7 +330,7 @@
         android:gravity="center"
         android:visibility="gone" >
 
-        <hsd.symptom.checker.textview.RalewayTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
